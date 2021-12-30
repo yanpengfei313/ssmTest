@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo_Springmvc_Test" />
+        <module name="demo49_springmvc_interceptor" />
+        <module name="demo10_spring_IOC_ann" />
+        <module name="demo42_springmvc_anno" />
+        <module name="demo41_springmvc_conver" />
+        <module name="demo31_spring_jdbc" />
+        <module name="demo01_Spring_history" />
+        <module name="ssm_service" />
+        <module name="demo36_springmvc_first" />
+        <module name="demo48_sprinbmvc_exception" />
+        <module name="ssm_dao" />
+        <module name="demo32_spring_jdbc" />
+        <module name="demo44_springmvc_example" />
+        <module name="demo35_spring_transfer_V3" />
+        <module name="demo46_springmvc_upload_v2" />
+        <module name="demo08_spring_IOC" />
+        <module name="demo45_springmvc_upload_v1" />
+        <module name="demo13_spring_AllAnnotation" />
+        <module name="demo_Spring_LianXi01" />
+        <module name="demo43_springmvc_response" />
+        <module name="demo27_Spring_aop" />
+        <module name="demo40_springmvc_encoding" />
+        <module name="demo34_spring_transfer_V2" />
+        <module name="demo12_spring_mybatis" />
+        <module name="ssm_model" />
+        <module name="demo03_Spring_DI" />
+        <module name="demo39_Springmvc_formdata" />
+        <module name="demo38_springmvc_requestMapping" />
+        <module name="demo47_springmvc_fileServer" />
+        <module name="demo_Spring_LianXi02" />
+        <module name="demo_springmvc_Test1" />
+        <module name="demo29_Spring_AOP_xml" />
+        <module name="demo28_spring_aop_first" />
+        <module name="demo02_Spring_first" />
+        <module name="demo05_Spring_dataSource" />
+        <module name="demo04_Spring_DI_2" />
+        <module name="demo07_Spring_Mybatis" />
+        <module name="demo09_Spring_newBean" />
+        <module name="demo37_springmvc_quickStart" />
+        <module name="demo06_Spring_Annotation" />
+        <module name="demo33_spring_transfer_V1" />
+        <module name="demo11_Spring_DI_anno" />
+        <module name="demo30_Spring_AOP_anno" />
+        <module name="demo45_springmvc_test" />
+        <module name="ssm_controller" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="11">
+      <module name="demo01_Spring_history" target="1.5" />
+      <module name="demo02_Spring_first" target="1.5" />
+      <module name="demo03_Spring_DI" target="1.5" />
+      <module name="demo04_Spring_DI_2" target="1.5" />
+      <module name="demo05_Spring_dataSource" target="1.5" />
+      <module name="demo06_Spring_Annotation" target="1.5" />
+      <module name="demo07_Spring_Mybatis" target="1.5" />
+      <module name="demo08_spring_IOC" target="1.5" />
+      <module name="demo09_Spring_newBean" target="1.5" />
+      <module name="demo10_spring_IOC_ann" target="1.5" />
+      <module name="demo11_Spring_DI_anno" target="1.5" />
+      <module name="demo12_spring_mybatis" target="1.5" />
+      <module name="demo13_spring_AllAnnotation" target="1.5" />
+      <module name="demo27_Spring_aop" target="1.5" />
+      <module name="demo28_spring_aop_first" target="1.5" />
+      <module name="demo29_Spring_AOP_xml" target="1.5" />
+      <module name="demo30_Spring_AOP_anno" target="1.5" />
+      <module name="demo31_spring_jdbc" target="1.5" />
+      <module name="demo32_spring_jdbc" target="1.5" />
+      <module name="demo33_spring_transfer_V1" target="1.5" />
+      <module name="demo34_spring_transfer_V2" target="1.5" />
+      <module name="demo35_spring_transfer_V3" target="1.5" />
+      <module name="demo36_springmvc_first" target="1.7" />
+      <module name="demo37_springmvc_quickStart" target="1.7" />
+      <module name="demo38_springmvc_requestMapping" target="1.7" />
+      <module name="demo39_Springmvc_formdata" target="1.7" />
+      <module name="demo40_springmvc_encoding" target="1.7" />
+      <module name="demo41_springmvc_conver" target="1.7" />
+      <module name="demo42_springmvc_anno" target="1.7" />
+      <module name="demo43_springmvc_response" target="1.7" />
+      <module name="demo44_springmvc_example" target="1.7" />
+      <module name="demo45_springmvc_test" target="1.7" />
+      <module name="demo45_springmvc_upload_v1" target="1.7" />
+      <module name="demo46_springmvc_upload_v2" target="1.7" />
+      <module name="demo47_springmvc_fileServer" target="1.7" />
+      <module name="demo48_sprinbmvc_exception" target="1.7" />
+      <module name="demo48_springmvc_execption" target="1.7" />
+      <module name="demo49_springmvc_interceptor" target="1.7" />
+      <module name="demo_Spring_LianXi01" target="1.5" />
+      <module name="demo_Spring_LianXi02" target="1.5" />
+      <module name="demo_Springmvc_Test" target="1.7" />
+      <module name="demo_springmvc_Test1" target="1.7" />
+      <module name="ssm_controller" target="1.7" />
+      <module name="ssm_dao" target="1.5" />
+      <module name="ssm_model" target="1.5" />
+      <module name="ssm_parent" target="1.5" />
+      <module name="ssm_service" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

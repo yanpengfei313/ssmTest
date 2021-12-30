@@ -1,0 +1,22 @@
+[Spring的事务管理]
+    持久层框架不同,所使用的事务方案也就不一样
+        1. 原始的JDBC
+            1.1 开启事务: connection.setAutoCommit(false);
+            1.2 提交事务: connection.commit();
+            1.3 回滚事务: connection.rollback();
+        2. DBUtils,底层原理和原始的JDBC一样
+        3. mybatis, 底层原理和原始的JDBC也是一样的
+            1.1 开启事务: sqlSessionFactory.openSession(); 默认开启事务
+            1.2 提交事务: sqlSession.commit();
+            1.3 回滚事务: sqlSession.rollback();
+        4. 其他的持久层框架,要和Spring框架整合,那么事务的相关操作就全部交给Spring来控制了
+            4.1 编程式事务(了解一下),也叫硬编码
+            4.2 声明式事务[重点]
+
+            Spring管理事务是通过事务管理器来管理的,定义了一个接口PlatFormTransactionManager
+
+[事务的传播行为]
+    一般会把事务设置在service层中,确保事务的一致性
+    当我们调用service层中的某一个方法的时候,它能够保证我们的这个方法,执行的所有的数据库的相关操作都保持在同一个事务中,
+    如果你在service层的这个方法中,还调用了其他service层的方法,那么在调用其他方法的时候,必须保证这两个service层的方法是在同一个事务中的
+    总归一句话,你一个业务方法的调用,必须保证所调用的过程以及结果都是在同一个事务中,要么全部成功,要么全部失败

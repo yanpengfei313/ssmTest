@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展示所有用户信息列表页面</title>
+    <script src="js/axios-0.18.0.js"></script>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <table border="1" cellspacing="0" width="700px" align="center">
+        <tr>
+            <th>uid</th>
+            <th>username</th>
+            <th>sex</th>
+            <th>birthday</th>
+            <th>address</th>
+            <th>操作</th>
+        </tr>
+        <tr v-for="(user,index) in userList">
+            <td v-html="user.uid"></td>
+            <td v-html="user.username"></td>
+            <td v-html="user.sex"></td>
+            <td v-html="user.birthday"></td>
+            <td v-html="user.address"></td>
+            <td>
+                <input type="button" value="删除" @click="deleteById(user.uid)">
+            </td>
+        </tr>
+    </table>
+</div>
+<script>
+    var vue = new Vue({
+        el: "#app",
+        data:{
+            userList:[]
+        },
+        methods:{
+            findAll(){
+                axios.get("/user/findAll").then(response=>{
+                    this.userList = response.data.result;
+                })
+            },
+            deleteById: function (uid) {
+                let b = confirm("确定删除用户信息");
+                if(b){
+                    axios.get("/user/" + uid).then(response => {
+                        if (response.data.flag) {
+                            this.findAll();
+                        }
+                    })
+                }
+
+            }
+        },
+        created(){
+            this.findAll();
+        }
+    });
+</script>
+</body>
+</html>

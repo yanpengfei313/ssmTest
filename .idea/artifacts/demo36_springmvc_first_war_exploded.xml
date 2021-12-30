@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="demo36_springmvc_first:war exploded">
+    <output-path>$PROJECT_DIR$/demo36_springmvc_first/target/demo36_springmvc_first</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>demo36_springmvc_first</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="demo36_springmvc_first" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/demo36_springmvc_first/target/demo36_springmvc_first/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="demo36_springmvc_first/web/Web" />
+    </root>
+  </artifact>
+</component>

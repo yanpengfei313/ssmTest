@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--
+        每一个实现类就对应着一个bean标签
+            id属性:表示该bean对象的唯一标识,根据唯一标识,就可以从核心容器中获取对象
+            class属性: 对象所属的实现类的全限定定名
+    -->
+    <bean id="userService" class="com.fei.service.impl.UserServiceImpl"/>
+    <bean id="userService02" class="com.fei.service.impl.UserServiceImpl"/>
+
+    <!--
+        bean
+    -->
+
+
+</beans>

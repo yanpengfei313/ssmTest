@@ -1,0 +1,30 @@
+[需求: 在service的增删改查方法调用之前进行相关的权限效验]
+    [任务细化]
+        任务1: 在执行增删改查方法之前,都要进行权限效验
+            1. 切入点: UserServiceImpl中的所有方法
+            2. 通知: MyAspect中的权限效验方法checkPermission()
+            3. 通知类型: 前置通知
+            4. 切面类:MyAspect类的对象
+
+        任务2: 在执行完所有的方法之后,都要获取方法的返回值,并且进行日志打印"方法执行完毕,返回值是: "
+            1. 切入点: UserServiceImpl中的所有方法
+            2. 通知: MyAspect中的打印方法checkResult()
+            3. 通知类型:后置通知
+            4. 切面类:MyAspect类的对象
+
+        任务3: 在执行所有方法出现异常之后,将异常信息写入到本地控制台打印出来
+            1. 切入点: UserServiceImpl中的所有方法
+            2. 通知: MyAspect中的打印异常信息checkException()
+            3. 通知类型:异常通知
+            4. 切面类:MyAspect类的对象
+
+        任务4: 在执行所有方法之后,无论是否出现异常,都要执行"资源回收的操作..."
+            1. 切入点: UserServiceImpl中的所有方法
+            2. 通知: MyAspect中的资源关闭close()
+            3. 通知类型:最终通知
+            4. 切面类:MyAspect类的对象
+        任务5: 在执行query()查询方法的过程中,统计执行的时间
+            1. 切入点: UserServiceImpl中的query()方法
+            2. 通知: MyAspect中的统计时间totalTime()
+            3. 通知类型:环绕通知
+            4. 切面类:MyAspect类的对象

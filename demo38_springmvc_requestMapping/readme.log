@@ -1,0 +1,20 @@
+【RequestMapping】
+    1. RequestMapping的作用
+        该注解的作用是建立请求URL和处理方法之间的关系
+    2. RequestMapping的位置
+        该注解可以作用在类和方法上
+        2.1 使用在类上面的话
+            表示的请求的URL的第一级访问目录，如果不写的话，表示应用的根目录，
+            如果要写在类上面的话，那么需要以【/开头】
+            在类上面写该注解主要目的是为了让我们的URL可以按照模块化管理
+        2.2 使用在方法上面的话
+            表示的请求的URL的第二级目录
+    3. RequestMapping的属性
+        path：指定请求路径的URL
+        value：和 path属性是一样
+        method：指定该方法的请求方式
+                @RequestMapping(path = "/sayHello3",method = {RequestMethod.POST})
+                或者也可以使用
+                @PostMapping("/sayHello3")
+        params：指定限制请求参数的条件
+        headers：发送的请求中必须包含请求头

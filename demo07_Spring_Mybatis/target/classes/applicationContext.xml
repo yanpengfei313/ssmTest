@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+    <!-- 混合开发 -->
+    <!-- 第一步: 配置包扫描 -->
+    <context:component-scan base-package="com.fei"/>
+    <context:property-placeholder location="classpath:db.properties"/>
+    <!--
+        第二步: 整合mybatis
+            1. 配置DataSource
+            2. 配置SqlSessionFactoryBean
+                DataSource的注入
+                typeAliasesPackage的注入
+            3. 配置MapperScannerConfigurer,进行dao接口的包扫描
+                注入要扫描的dao包所在的包路径
+    -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="typeAliasesPackage" value="com.fei.pojo"/>
+    </bean>
+
+    <!-- 创建dao层接口的代理对象 -->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.fei.mapper"/>
+    </bean>
+
+
+</beans>

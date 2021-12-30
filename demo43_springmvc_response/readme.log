@@ -1,0 +1,32 @@
+【响应数据和结果视图】
+    controller的返回值
+        1. 字符串
+            controller返回字符串，返回的是一个逻辑视图名称，通过视图解析器解析为物理视图地址
+        2. ModelAndView
+            是SpringMVC提供的一个对象，视图模型对象可以用于控制器方法的返回值
+
+【请求转发和重定向】
+    controller方法在提供了String类型的返回值之后，默认就是请求转发，
+    当然，我们可以加上【forwar：物理视图地址】，这样也可以转发到页面上去，或者转发到某个controller方法上
+                    【redirect：物理视图地址】，但是不能指向WEB-INF路径下的页面
+
+【转发和重定向的区别】
+    1. 转发是一次请求，重定向是两次请求
+    2. 转发的话网址栏地址不会变化，重定向的路径会发生变化
+    3. 转发只能转发到内部的资源，重定向可以重定向到内部(项目里面)，或者外部(项目外部的)的都可以
+
+【springmvc与json进行交互】
+    @ResponseBody来响应json数据
+    该注解可以用于controller的方法返回对象格式为json格式
+    通过HttpMessageConverter接口转换为指定的格式数据，比如：json格式，xml格式，通过Response响应给客户端
+
+【DispatcherServlet拦截所有的请求，包括静态资源】
+    解决DispatcherServlet拦截静态资源的问题
+        三种解决方案：
+            方案一：默认拦截路径是”/“
+                就是在spinrg的配置文件中设置 静态资源不过滤【不建议，比较麻烦】
+            方案二：让DefaultServlet来处理静态资源，DispatcherServlet就不用管静态资源的事情
+                <mvc:default-servlet-com.fei.handler />
+            方案三：直接改变DispatcherServlet的拦截路径，改成*.do
+
+

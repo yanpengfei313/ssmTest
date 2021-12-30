@@ -1,0 +1,12 @@
+使用纯注解的方式给改造一下CRUD[了解]
+
+    @Configuration
+        作用: 用于指定当前类是一个Spring类,当创建容器的时候就会从该类上加载注解
+        获取容器核心对象的时候,我们需要使用AnnotationApplicationContext类
+        属性:value用于指定配置类的字节码
+    @ComponentScan
+        作用: 用于指定spring在初始化容器的时候要扫描的包,
+        属性: basePackages: 用于指定要扫描的包
+    @Bean
+        作用: 该注解只能写在方法上,表明使用此方法创建一个对象,并且放入到Spring容器中
+        属性: name,给当前的

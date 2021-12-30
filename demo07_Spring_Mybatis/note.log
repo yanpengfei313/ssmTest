@@ -1,0 +1,27 @@
+[使用Spring整合mybaitis]
+    1. 引入mybatis以及整合的相关依赖
+    2. Spring的IOC容器中创建DataSource对象(暂时使用spring内容的DataSource)
+    3. 在Spring的IOC容器中创建SqlSessionFactoryBean,指定要配置的别名的包或者加载核心配置文件
+    4. 在Spring的IOC容器中创建MapperScannerConfigurer对象,用于Dao接口创建代理对象
+    5. 通过注解的方式注入Dao代理对象
+
+[mybatis 整合spring需要引入一个整合依赖:mybatis-spring]
+    [问题]哪个对象是我们需要的?
+        mapper[单例],sqlSession[多例],sqlSessionFactory[单例]
+        sqlSession是factory创建出来的,一般是用的是单例[参考之前的工具类]
+        sqlSession相当于connection的,我们使用多例的方式,
+        mapper是由sqlSession创建出来的,我们使用mapper就一次创建即可,我们mapper使用单例
+
+    [目标1] 将sqlSessionFactory对象创建出来,放到spring的容器中
+    [目标2] 将项目中的所有dao层接口的代理对象都创建出来,放到spring容器中
+    [目标3] 直接从spring的核心容器中获取dao层的代理对象就可以直接操作对应接口中的方法
+
+    [具体的实现步骤]
+        1. 引入mybatis-spring的依赖
+        2. 在spring的配置文件中
+            2.1 对DataSource进行IOC
+            2.2 对SqlSessionFactoryBean进行IOC
+                1. 注入dataSource
+                2. 注入typeAliasesPackage,指定要配置别名的包扫描
+        3. 对MapperScannerConfigurer进行IOC,并且配置指定的扫描dao包
+            注入basePackage,指定要创建代理对象的dao接口所在的包

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="demo47_springmvc_fileServer:war">
+    <output-path>$PROJECT_DIR$/demo47_springmvc_fileServer/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>demo47_springmvc_fileServer</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="demo47_springmvc_fileServer.war">
+      <element id="artifact" artifact-name="demo47_springmvc_fileServer:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../Lianxi/demo45_springmvc_test" />
+    <file type="web" url="file://$PROJECT_DIR$/../Lianxi/demo45_springmvc_upload_v1" />
+    <file type="web" url="file://$PROJECT_DIR$/../Lianxi/demo48_springmvc_execption" />
+    <file type="web" url="file://$PROJECT_DIR$/../Lianxi/demo_Springmvc_Test" />
+    <file type="web" url="file://$PROJECT_DIR$/../Lianxi/demo_springmvc_Test1" />
+    <file type="web" url="file://$PROJECT_DIR$/../mavenProject/ssm_parent/ssm_controller" />
+    <file type="web" url="file://$PROJECT_DIR$/demo036_springmvc_first" />
+    <file type="web" url="file://$PROJECT_DIR$/demo36_springmvc_first" />
+    <file type="web" url="file://$PROJECT_DIR$/demo37_springmvc_quickStart" />
+    <file type="web" url="file://$PROJECT_DIR$/demo37_springmvc_quickStart1" />
+    <file type="web" url="file://$PROJECT_DIR$/demo38_springmvc_requestMapping" />
+    <file type="web" url="file://$PROJECT_DIR$/demo39_Springmvc_formdata" />
+    <file type="web" url="file://$PROJECT_DIR$/demo39_Springmvc_formdata1" />
+    <file type="web" url="file://$PROJECT_DIR$/demo40_springmvc_encoding" />
+    <file type="web" url="file://$PROJECT_DIR$/demo41_springmvc_conver" />
+    <file type="web" url="file://$PROJECT_DIR$/demo42_springmvc_anno" />
+    <file type="web" url="file://$PROJECT_DIR$/demo43_springmvc_response" />
+    <file type="web" url="file://$PROJECT_DIR$/demo44_springmvc_example" />
+    <file type="web" url="file://$PROJECT_DIR$/demo45_springmvc_upload_v1" />
+    <file type="web" url="file://$PROJECT_DIR$/demo46_springmvc_upload_v2" />
+    <file type="web" url="file://$PROJECT_DIR$/demo47_springmvc_fileServer" />
+    <file type="web" url="file://$PROJECT_DIR$/demo48_sprinbmvc_exception" />
+    <file type="web" url="file://$PROJECT_DIR$/demo48_springmvc_execption" />
+    <file type="web" url="file://$PROJECT_DIR$/demo49_springmvc_interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/demo_Springmvc1111111" />
+    <type id="Spring" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/demo04_Spring_DI_2/pom.xml" />
+        <option value="$PROJECT_DIR$/demo05_Spring_dataSource/pom.xml" />
+        <option value="$PROJECT_DIR$/demo03_Spring_DI/pom.xml" />
+        <option value="$PROJECT_DIR$/demo02_Spring_first/pom.xml" />
+        <option value="$PROJECT_DIR$/demo01_Spring_history/pom.xml" />
+        <option value="$PROJECT_DIR$/demo00_ceShi/pom.xml" />
+        <option value="$PROJECT_DIR$/demo06_Spring_Annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/demo000_LianXi/pom.xml" />
+        <option value="$PROJECT_DIR$/demo000_LianXi1/pom.xml" />
+        <option value="$PROJECT_DIR$/demo000_LianXi2/pom.xml" />
+        <option value="$PROJECT_DIR$/demo000_LianXi3/pom.xml" />
+        <option value="$PROJECT_DIR$/demo07_Spring_Mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/../myprojects/demo000_LianXi4/pom.xml" />
+        <option value="$PROJECT_DIR$/../myprojects/demo08_spring_IOC/pom.xml" />
+        <option value="$PROJECT_DIR$/../myprojects/demo09_Spring_newBean/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo10_spring_IOC_ann/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo11_Spring_DI_anno/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo12_spring_mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo13_spring_AllAnnotation/pom.xml" />
+        <option value="$PROJECT_DIR$/demo10_spring_IOC_ann/pom.xml" />
+        <option value="$PROJECT_DIR$/demo11_Spring_DI_anno/pom.xml" />
+        <option value="$PROJECT_DIR$/demo12_spring_mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/demo13_spring_AllAnnotation/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo_Spring_LianXi01/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo27_Spring_aop/pom.xml" />
+        <option value="$PROJECT_DIR$/demo27_Spring_aop/pom.xml" />
+        <option value="$PROJECT_DIR$/demo28_spring_aop_first/pom.xml" />
+        <option value="$PROJECT_DIR$/demo29_Spring_AOP_xml/pom.xml" />
+        <option value="$PROJECT_DIR$/demo30_Spring_AOP_anno/pom.xml" />
+        <option value="$PROJECT_DIR$/demo31_spring_jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/demo32_spring_jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/demo33_spring_transfer_V1/pom.xml" />
+        <option value="$PROJECT_DIR$/demo34_spring_transfer_V2/pom.xml" />
+        <option value="$PROJECT_DIR$/demo35_spring_transfer_V3/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo_Spring_LianXi02/pom.xml" />
+        <option value="$PROJECT_DIR$/demo03_springmvc_first/pom.xml" />
+        <option value="$PROJECT_DIR$/demo36_springmvc_first/pom.xml" />
+        <option value="$PROJECT_DIR$/demo37_springmvc_quickStart1/pom.xml" />
+        <option value="$PROJECT_DIR$/demo37_springmvc_quickStart/pom.xml" />
+        <option value="$PROJECT_DIR$/demo38_springmvc_requestMapping/pom.xml" />
+        <option value="$PROJECT_DIR$/demo39_Springmvc_formdata/pom.xml" />
+        <option value="$PROJECT_DIR$/demo39_Springmvc_formdata1/pom.xml" />
+        <option value="$PROJECT_DIR$/demo_Springmvc1111111/pom.xml" />
+        <option value="$PROJECT_DIR$/demo40_springmvc_encoding/pom.xml" />
+        <option value="$PROJECT_DIR$/demo41_springmvc_conver/pom.xml" />
+        <option value="$PROJECT_DIR$/demo42_springmvc_anno/pom.xml" />
+        <option value="$PROJECT_DIR$/demo43_springmvc_response/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo_StringTest/pom.xml" />
+        <option value="$PROJECT_DIR$/demo_StringTest/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo_Springmvc_Test/pom.xml" />
+        <option value="$PROJECT_DIR$/demo44_springmvc_example/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo45_springmvc_test/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo45_springmvc_upload_v1/pom.xml" />
+        <option value="$PROJECT_DIR$/demo45_springmvc_upload_v1/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo48_springmvc_execption/pom.xml" />
+        <option value="$PROJECT_DIR$/demo48_springmvc_execption/pom.xml" />
+        <option value="$PROJECT_DIR$/demo46_springmvc_upload_v2/pom.xml" />
+        <option value="$PROJECT_DIR$/demo47_springmvc_fileServer/pom.xml" />
+        <option value="$PROJECT_DIR$/demo48_sprinbmvc_exception/pom.xml" />
+        <option value="$PROJECT_DIR$/demo49_springmvc_interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/../Lianxi/demo_springmvc_Test1/pom.xml" />
+        <option value="$PROJECT_DIR$/../mavenProject/ssm_parent/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/target" />
+  </component>
+</project>

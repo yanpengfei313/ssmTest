@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+        <!-- 包扫描 -->
+    <context:component-scan base-package="com.fei"/>
+    <aop:config>
+        <!-- expression切点表达式有几个,作用是专门描述切入点 -->
+        <aop:pointcut id="pointcut1" expression="execution(* com.fei..*.*(..))"/>
+        <aop:pointcut id="pointcut2" expression="execution(public String com.fei.service.impl.UserServiceImpl2.query())"/>
+        <!-- 配置切面-->
+        <aop:aspect id="myAspect" ref="myAspect">
+            <!-- 配置前置通知,增强所有的方法: 任务1 -->
+            <aop:before method="checkPermission" pointcut-ref="pointcut1"/>
+            <!-- 配置后置通知,有一个特殊的属性returning,专门用来指定切入点的返回值赋值给通知中的哪个参数-->
+            <aop:after-returning method="printResult" returning="returnValue" pointcut-ref="pointcut1"/>
+            <!-- 配置异常通知 -->
+            <aop:after-throwing method="printException" throwing="errorMsg" pointcut-ref="pointcut1"/>
+            <!-- 配置最终通知-->
+            <aop:after method="close" pointcut-ref="pointcut1"/>
+            <!-- 配置环绕通知 -->
+            <aop:around method="totalTime" pointcut-ref="pointcut2"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

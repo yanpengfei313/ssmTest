@@ -1,0 +1,25 @@
+Spring整合mybatis
+    1. 引入mybatis以及整合的相关依赖
+    2. 在spring的IOC容器中创建DateSource对象
+    3. 在spring的IOC容器中创建sqlSessionFactory对象, 并且可以指定要配置别名的包或者加载核心配置文件
+    4. 在spring的IOC容器中创建MapperScannerConfigurer对象,用于扫描dao层接口创建代理对象
+    5. 通过注解的方式完成Dao层对象的依赖注入
+
+整合思路：
+    那个对象是我们需要创建出来的?
+        Dao层代理对象mapper
+        SqlSession对象
+        SqlSessionFactory对象[单例]
+    目标1: 将sqlSessionFactory对象创建出来,放到spring的核心容器中
+    目标2: 将项目中的所有的Dao层代理对象全部创建出来,放到spring的核心容器中
+    目标3: 直接从spring的核心容器中获取Dao层接口的代理对象
+
+具体步骤:
+    1. 引入相关依赖
+    2. 在Spring的核心配置文件里
+        2.1 对DateSource进行IOC
+        2.2 对SqlSessionFactoryBean进行IOC
+            1. 注入dataSource
+            2. 注入typeAliasesPackage,只当要配置的别名的包扫描
+        2.3 对MapperScannerConfigurer进行IOC,并且配置属性指定其扫描的包路径
+            1. 注入basePackage,指定要创建代理对象的dao层接口所在的报名

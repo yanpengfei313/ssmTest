@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../Lianxi/demo45_springmvc_test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../Lianxi/demo45_springmvc_test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../Lianxi/demo_Springmvc_Test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../Lianxi/demo_Springmvc_Test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../Lianxi/demo_springmvc_Test1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../Lianxi/demo_springmvc_Test1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mavenProject/ssm_parent/ssm_controller/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mavenProject/ssm_parent/ssm_controller/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo37_springmvc_quickStart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo37_springmvc_quickStart/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo38_springmvc_requestMapping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo38_springmvc_requestMapping/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo39_Springmvc_formdata/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo39_Springmvc_formdata/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo40_springmvc_encoding/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo40_springmvc_encoding/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo41_springmvc_conver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo41_springmvc_conver/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo42_springmvc_anno/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo42_springmvc_anno/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo43_springmvc_response/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo43_springmvc_response/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo44_springmvc_example/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo44_springmvc_example/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo45_springmvc_upload_v1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo45_springmvc_upload_v1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo46_springmvc_upload_v2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo46_springmvc_upload_v2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo48_sprinbmvc_exception/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo48_sprinbmvc_exception/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo49_springmvc_interceptor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo49_springmvc_interceptor/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

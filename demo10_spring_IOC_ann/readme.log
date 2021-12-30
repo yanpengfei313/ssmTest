@@ -1,0 +1,30 @@
+Spring的IOC的注解开发
+    能够使用注解来代替xml中的Bean标签
+    [步骤]
+        1. 添加坐标依赖
+        2. 在核心配置中开启包扫描
+        3. 在类上面添加注解@Componebt, 组件的意思
+    @Component[用在类上面的,一般建议使用在除了三层结构之外的其他类上卖弄]
+    @Controller[用在表现层或者控制层上面]
+    @Service[用在业务层的实现类上]
+    @Repository[用在dao层的实现类上]
+
+    [注意] 以上注解都是有value属性的,value属性表示的是该对象的id,如果不配置,那么对象的id默认就是类名首字母小写,比如: userServiceImpl
+
+注解的进阶
+    [用于创建对象的注解]
+        @Component,相当于<bean id="" class="">
+        作用: 吧资源交给Spring来管理,相当于在xml中配置了一个bean
+    [用于改变作用范围的注解]
+    @Scope
+        singleton: 单列[默认]
+        prototype: 多例
+        @Scope注解是用来描述类的作用范围,默认是singleton,相当于xml中bean标签里面的scope属性:<bean id="" class="" scope="">
+        同样是放在类的上面
+    [和生命周期相关的注解]
+        初始化回调方法<bean id="" class=""  init-method="">
+            @PostConstruct, 用来设置spring框架初始化此类实例时调用的初始化方法,标注在此类的初始化方法上
+        销毁的回调方法<bean id="" class="" destroy-method="">
+            @PreDestroy,用来设置spring框架销毁此类实例时调用的销毁方法,标注在此类的销毁方法上
+
+

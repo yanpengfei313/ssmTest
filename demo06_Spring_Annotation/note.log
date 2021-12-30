@@ -1,0 +1,52 @@
+[Spring注解开发]
+    @Component      该注解用在类上,对应着该类的实例Bean
+    @Controller     用在类上面,表示该类时web层的实例Bean
+    @Service        用在类上面,表示该类时service层的实例Bean
+    @Repository     用在类上面,表示该类时dao层的实例Bean
+    @Autowired      用在字段上面,表示根据类型完成依赖的注入
+    @Qualifier      结合@Autowired一起使用的,表示根据名称自动进入依赖注入
+    @Resource       等效于 @Autowired + @Qualifier,表示根据名称进行注入
+    @Value          注入普通属性
+    @Scope          标注Bean的作用范围
+    @PostConstruct  使用在方法上,表示该方法时Bean的初始化方法
+    @PreDestroy     使用在方法上,表示该方法时Bean的销毁方法
+
+    [注意]
+        1. 使用注解进行开发的时候,需要在Spring的核心配置文件中配置[组件扫描]
+        2. 组件扫描的作用是指定哪个包及其包下的Bean需要进行扫描,方便识别注解配置的类,字段和方法
+        <context:component-scan base-package="com.fei"/>
+
+    [@Component] 翻译过来就是组件的意思
+        相当于<bean id ="" class="">
+        作用: 把资源交给Spring来管理,相当于在xml中配置了一个bean
+        属性: id=指定bean的id,默认bean的id时当前类的类名,首字母小写
+    web层中的三层结构分别有对应的注解,在Spring当中我们都称之为Component,
+        三个衍生的注解如下:
+            @Controller     修饰web层
+            @Service        修饰业务层
+            @Repository     修饰数据持久层
+    [@Scope]
+        singleton: 单例
+        prototype: 多例
+        该注解时用来描述类的作用范围,默认值时singleton,相当于<bean id="" class="" scope="">
+    [@Value]
+        注入简单类型
+            注入的都是基本数据类型和String类型的数据
+            表示指定该属性的值,可以通过动态的方式获得内容在赋值
+
+            @Value("${jdbc.username}")
+            private String username;
+    [@Autowired]
+        自动的按照类型注入,当使用这个注解给成员属性对象使用的时候,就不需要使用set方法了,
+        提前是: 必须只有一个实现类,才可以
+
+        在UserServiceImpl中给UserDao上面加一个该注解,就不需要set方法就能完成实例的注入
+
+[XML和注解   混合开发]
+            基于XML配置                         注解的配置
+Bean定义      <bean>                      @Component/@Controller/@Service/@Repository
+Bean名称      <bean id=""/name="">        @Component("userService")
+Bean注入      <property>                  @Autowired[根据类型注入] && @Qualifier[根据名称注入]    /@Resource
+Bean生命周期   init-method/destroy-method  @PostConstruct初始化/@PreDestroy销毁
+Bean作用范围   scope                       @Scope
+Bean使用场景   第三方类使用配置               自己写的类

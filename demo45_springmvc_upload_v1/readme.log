@@ -1,0 +1,27 @@
+[springmvc实现文件的上传]
+    使用场景:
+        上传头像
+        用户可以从客户端打开硬件终端中的文件,上传到网站,保存一份到服务器里面,就是文件的拷贝
+    前端要求:
+        1.表单提交的方式必须是post
+        2. 提供表单的文件上传框组件 input type="file"
+        3. 表单必须有一个属性enctype,该属性的属性值必须是"multipart/form-data"
+    服务器端要求:
+        1. 必须有接收客户端上传的文件的相关代码
+        2. 准备一个目录专门用来存储客户端上传的文件
+        3. 将客户端上传的文件写入到准备好的目录中
+    [注意]
+        enctype="multipart/form-data",表单中一旦写了这个属性,原始的获取方式request.getParameter("")就无法使用,结果为null
+        所以,我们一般文件上传都会借助第三方组件来实现上传,比如SpringMVC,另外的第三方jar
+    [常见的文件上传的jar]
+        1. servlet3.0,原生的文件上传API
+        2. commons-fileupload:apache的一个专门用来处理文件上传的工具包
+        3. SpringMVC 底层均封装了commons-fileupload
+        4. struts2   底层均封装了commons-fileupload
+
+    [通过springMVC传统方式完成文件的上传]
+        [步骤]
+            1. 引入相关的依赖 commons-fileupload
+            2. 在控制器的方法里面定义一下文件上传的相关变量怎么定义(形参的定义和multipart)
+            3. 文件存到服务器里面
+            4. 配置文件解析器
