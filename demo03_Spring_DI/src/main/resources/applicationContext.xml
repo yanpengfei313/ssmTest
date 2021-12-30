@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+                    http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 把UserDaoImpl的配置进来,编程spring管理的bean-->
+    <bean id="userDao" class="com.fei.mapper.impl.UserDaoImpl"/>
+
+    <!--
+        [Bean的依赖注入概念]
+            依赖注入[Dependency Injection]:是Spring框架的核心IOC的具体实现
+                编写程序的时候,通过控制反转,将对象的创建交给了Spring,但是代码中不可能出现没有依赖的情况
+                IOC解耦只是降低了他们之间的依赖关系,但是不会消除,比如刚才的代码中,业务层仍然会调用持久层的方法
+                所以,当前的这种依赖关系,是在使用Spring之后,由Spring来进行维护
+                总之,就是等框架把持久层对象传入业务层,而不需要我们自己去创建获取
+        [依赖注入的方式]
+            1. 有参构造注入的方式
+                我们需要创建有参构造方法
+            2. set方法注入
+                我么需要给UserDao对象成员属性进行set方法
+                [P命名控件的注入方式]
+                    1. 需要引入p命名空间
+                    2. 在userService的id的bean中,使用p:set方法 这样的方式来进行引入userDao的bean对象
+    -->
+
+    <!--
+        因为我们的UserServiceImpl实现类中没有无参构造函数,所以我们必须使用有参的构造配置
+        这就是[有参构造方式的依赖注入]
+            我们要通过有参构造的方式将UserDao的实例注入到userService的bean中
+    -->
+
+    <!--第一种: 有参构造方法的方式-->
+<!--    <bean id="userService" class="com.fei.service.Impl.UserServiceImpl">
+        &lt;!&ndash; name的值是有参构造函数中的形参 ref表示的是spring容器中的bean &ndash;&gt;
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>-->
+    <!--第二种: set方法的注入方式-->
+<!--    <bean id="userService" class="com.fei.service.Impl.UserServiceImpl">
+        &lt;!&ndash; name的值是实现类中的set方法的简写,去掉set,将set后面的字母变成小写即可&ndash;&gt;
+        <property name="userDao" ref="userDao"></property>
+    </bean>-->
+    <!--第三种: set方法的p命名空间注入方式-->
+    <!-- 其实本质上还是set方法,只是做到了简化配置 -->
+    <bean id="userService" class="com.fei.service.Impl.UserServiceImpl" p:userDao-ref="userDao"/>
+
+
+    <!-- 调用Spring容器配置的set方法进行依赖注入 -->
+<!--    <bean id="userService2" class="com.fei.service.Impl.UserServiceImpl">
+        <property name="userDao2" ref="userDao"></property>
+    </bean>-->
+
+
+
+</beans>
